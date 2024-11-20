@@ -4,11 +4,7 @@ package matrix
 // Falls das Diagonalelement [col][col] nicht 0 ist, wird die Zeile durch das Diagonalelement normiert.
 // D.h. die gesamte Zeile col wird durch das Diagonalelement geteilt.
 func (m Matrix) Normalize(col int) {
-	if almostEqual(m[col][col], 0) {
-		return
-	}
-	factor := 1 / m[col][col]
-	m.ScalarMultRow(col, factor)
+	// TODO
 }
 
 // HINT
@@ -22,11 +18,7 @@ func (m Matrix) Normalize(col int) {
 // Dadurch wird jeweils das Element unter dem Diagonalelement 0.
 // Voraussetzung: Die Zeile row ist bereits normiert, d.h. das Diagonalelement ist 1.
 func (m Matrix) EliminateBelow(row int) {
-	for i := row + 1; i < len(m); i++ {
-		factor := -1 / m[i][row]
-		m.ScalarMultRow(i, factor)
-		m.AddRows(i, row)
-	}
+	// TODO
 }
 
 // HINT
@@ -39,11 +31,7 @@ func (m Matrix) EliminateBelow(row int) {
 // Dadurch wird jeweils das Element über dem Diagonalelement 0.
 // Voraussetzung: Die Zeile row ist bereits normiert, d.h. das Diagonalelement ist 1.
 func (m Matrix) EliminateAbove(row int) {
-	for i := 0; i < row; i++ {
-		factor := -1 / m[i][row]
-		m.ScalarMultRow(i, factor)
-		m.AddRows(i, row)
-	}
+	// TODO
 }
 
 // HINT
@@ -66,12 +54,7 @@ func (m Matrix) UpperTriangular() {
 // LowerTriangular führt die Gauß-Elimination für alle Zeilen der Matrix durch.
 // So entsteht im linken Bereich eine untere Dreiecksmatrix, bei der die Diagonalelemente 1 sind.
 func (m Matrix) LowerTriangular() {
-	l := len(m)
-	for i := range m {
-		m.Normalize(l - i - 1)
-		m.EliminateAbove(l - i - 1)
-	}
-	fixZeros(m)
+	// TODO
 }
 
 // HINT
@@ -79,8 +62,7 @@ func (m Matrix) LowerTriangular() {
 
 // Gauss transformiert die Matrix im linken Bereich in die Einheitsmatrix.
 func (m Matrix) Gauss() {
-	m.UpperTriangular()
-	m.LowerTriangular()
+	// TODO
 }
 
 // HINT
