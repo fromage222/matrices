@@ -69,5 +69,6 @@ func (m Matrix) LowerTriangular() {
 
 // Gauss transformiert die Matrix im linken Bereich in die Einheitsmatrix.
 func (m Matrix) Gauss() {
-	// TODO
+	m.UpperTriangular()
+	m.LowerTriangular()
 }
