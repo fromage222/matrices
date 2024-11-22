@@ -4,7 +4,7 @@ package matrix
 // Falls das Diagonalelement [col][col] nicht 0 ist, wird die Zeile durch das Diagonalelement normiert.
 // D.h. die gesamte Zeile col wird durch das Diagonalelement geteilt.
 func (m Matrix) Normalize(col int) {
-	// TODO
+	//
 }
 
 // EliminateBelow erwartet eine Zeilennummer `row`.

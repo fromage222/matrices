@@ -11,10 +11,10 @@ func ExampleScalarMult() {
 }
 
 func ExampleAdd() {
-	a := []float64{1, 2, 3}
+	a := []float64{3, 2, 3}
 	b := []float64{4, -5, 6}
 	Add(a, b)
 	fmt.Println(a)
 
-	// Output: [5 -3 9]
+	// Output: [7 -3 9]
 }
